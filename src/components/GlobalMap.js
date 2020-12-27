@@ -15,7 +15,7 @@ function Global({selectValue}) {
             // console.log(selectValue[0]);
         }
         getData();
-    }, []);
+    }, [selectValue[0]]);
 
     function gatherData(dataFromAPI) {
         // console.log(dataFromAPI[0].timeline.cases)
@@ -24,12 +24,12 @@ function Global({selectValue}) {
                 j = 0;
                 break;
             }
-            else if(dataFromAPI[j].country === selectValue[0]) {
+            else if(dataFromAPI[j].country == selectValue[0]) {
                 break;
             }
         }
         var days = Object.entries(dataFromAPI[j].timeline.cases);
-        // console.log(days);  // It shows [["day1", "cases"], ["day2", "cases"]...] in last 30 days
+        // console.log(days);  // It shows [["day1", "cases"], ["day2", "cases"]...] in last 30 days.
         var date;
         var december = [];
         var november = [];
