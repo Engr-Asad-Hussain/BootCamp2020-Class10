@@ -40,14 +40,13 @@ str.replace(/([a-z])([A-Z])/g, '$1 $2')
 ```
 - In the above example, the regex catches rA and dU.
 - You could also use a function as the second parameter instead of the $1 $2 string:
-``
+```
 let str = 'lowerAndUppercase'
 str.replace(/([a-z])([A-Z])/g, function(match, s1, s2) {
   return s1 + '  ' + s2
 })
 ```
 - In this case s1 and s2 are the same as $1 and $2 but you have more options to play with them.
-
 - [Details](https://forum.freecodecamp.org/t/spinal-tap-case-operator/56148)
 
 

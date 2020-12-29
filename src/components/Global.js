@@ -40,14 +40,13 @@ function Global({ selectValue, countryList, countryIndex }) {
 
     let [globalData, setGlobalData] = useState({});
     let [isFetching, setFetching] = useState(true);
-
+    
     useEffect(() => {
         async function getData() {
-            setFetching(true);
             const apiResponse = await fetch('https://api.covid19api.com/summary');
             const dataFromAPI = await apiResponse.json();
             // console.log(dataFromAPI);
-            gatherCountries(dataFromAPI, selectValue);
+            gatherCountries(dataFromAPI, countryList);
 
             setGlobalData(dataFromAPI);
             setFetching(false);
@@ -55,7 +54,7 @@ function Global({ selectValue, countryList, countryIndex }) {
         getData();
     }, []);
 
-    function gatherCountries(dataFromAPI, selectValue) {
+    const gatherCountries = (dataFromAPI, countryList) => {
         var list = []
         for (var i = 0; i < 192; i++) {
             list.push(dataFromAPI.Countries[i].Country);
@@ -63,7 +62,7 @@ function Global({ selectValue, countryList, countryIndex }) {
         // console.log(list);
         countryList[1](list);
     }
-
+    
     // console.log(globalData);
     const classes = useStyles();
 

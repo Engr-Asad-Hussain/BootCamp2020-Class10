@@ -24,7 +24,7 @@ function Global({selectValue}) {
                 j = 0;
                 break;
             }
-            else if(dataFromAPI[j].country == selectValue[0]) {
+            else if(dataFromAPI[j].country === selectValue[0]) {
                 break;
             }
         }
