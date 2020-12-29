@@ -1,5 +1,5 @@
 ## Covid-19 Tracker
-Surge: http://frightening-battle123.surge.sh/
+Surge: http://covid19-tracker-application.surge.sh/
 
 URL: https://github.com/Engr-Asad-Hussain/BootCamp2020-Class10
 
