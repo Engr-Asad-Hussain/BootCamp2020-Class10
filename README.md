@@ -1,6 +1,7 @@
 ## Covid-19 Tracker
 Surge: http://frightening-battle123.surge.sh/
 
+URL: https://github.com/Engr-Asad-Hussain/BootCamp2020-Class10
 
 ### ```<h1 style={{color: '#8e24aa'}}>Pakistan</h1>```
 - inline style for particular element
@@ -39,7 +40,7 @@ str.replace(/([a-z])([A-Z])/g, '$1 $2')
 ```
 - In the above example, the regex catches rA and dU.
 - You could also use a function as the second parameter instead of the $1 $2 string:
-```
+``
 let str = 'lowerAndUppercase'
 str.replace(/([a-z])([A-Z])/g, function(match, s1, s2) {
   return s1 + '  ' + s2
@@ -48,3 +49,42 @@ str.replace(/([a-z])([A-Z])/g, function(match, s1, s2) {
 - In this case s1 and s2 are the same as $1 and $2 but you have more options to play with them.
 
 - [Details](https://forum.freecodecamp.org/t/spinal-tap-case-operator/56148)
+
+
+### "reduce" prototype of an array:
+```
+// this is our initial value i.e. the starting point
+const initialValue = 0;
+
+// numbers array
+const numbers = [5, 10, 15];
+
+// reducer method that takes in the accumulator and next item
+const reducer = (accumulator, item) => {
+  return accumulator + item;
+};
+
+// we give the reduce method our reducer function and our initial value
+const total = numbers.reduce(reducer, initialValue)
+```
+- [Details](https://www.digitalocean.com/community/tutorials/js-finally-understand-reduce)
+
+### Line Bar
+- https://github.com/reactchartjs/react-chartjs-2/blob/master/example/src/components/line.js
+
+
+### React Number Format
+- https://www.npmjs.com/package/react-number-format
+- For animated numbers we use React Number Format library.
+
+### .toLocaleString()
+- To add commas at thousand places
+
+### SearchBar:::
+- https://material-ui.com/components/app-bar/
+
+### Material UI Github:::
+- https://github.com/mui-org/material-ui/blob/master/packages/material-ui/src/Select/SelectInput.js
+
+### FontWeight in React
+- https://reactnative.dev/docs/text-style-props
